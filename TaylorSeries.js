@@ -1,19 +1,16 @@
 factorial = function(input) {
-    var temp = 1;
+    if (input==0){return 1;}
     var output = 1;
-    while (temp <= input) {
-        output = output * temp;
-        temp = temp + 1;
+    for (var i = 1; i <= input; i++) {
+        output = output * i;
     }
     return output;
 }
 
 exp = function(input) {
-    var temp = 0;
-    var output = 0;
-    while (temp <= 20) {
-        output = (Math.pow(input, temp) / factorial(temp)) + output;
-        temp = temp + 1;
+    var output = 1;
+    for (var i = 1; i <= 100; i++) {
+        output = (Math.pow(input, i) / factorial(i)) + output;
     }
     return output;
 }
