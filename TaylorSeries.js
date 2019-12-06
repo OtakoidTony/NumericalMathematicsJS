@@ -12,7 +12,7 @@ exp = function(input) {
     var temp = 0;
     var output = 0;
     while (temp <= 20) {
-        output = (java.lang.Math.pow(input, temp) / factorial(temp)) + output;
+        output = (Math.pow(input, temp) / factorial(temp)) + output;
         temp = temp + 1;
     }
     return output;
@@ -22,7 +22,7 @@ cos = function(input){
     var temp = 0;
     var output = 0;
     while (temp <= 20) {
-        output = (java.lang.Math.pow(-1, temp)*java.lang.Math.pow(input, 2*temp) / factorial(2*temp)) + output;
+        output = (Math.pow(-1, temp)*Math.pow(input, 2*temp) / factorial(2*temp)) + output;
         temp = temp + 1;
     }
     return output;
@@ -32,7 +32,7 @@ sin = function(input){
     var temp = 0;
     var output = 0;
     while (temp <= 20) {
-        output = (java.lang.Math.pow(-1, temp)*java.lang.Math.pow(input, 2*temp+1) / factorial(2*temp+1)) + output;
+        output = (Math.pow(-1, temp)*Math.pow(input, 2*temp+1) / factorial(2*temp+1)) + output;
         temp = temp + 1;
     }
     return output;
@@ -42,12 +42,12 @@ eta = function(input){
     var temp = 1;
     var output = 0;
     while (temp <= 20) {
-        output = output + java.lang.Math.pow(-1, temp-1)/java.lang.Math.pow(temp, input);
+        output = output + Math.pow(-1, temp-1)/Math.pow(temp, input);
         temp = temp + 1;
     }
     return output
 }
 
 zeta = function(input){
-    return eta(input)/(1-java.lang.Math.pow(2, 1-input));
+    return eta(input)/(1-Math.pow(2, 1-input));
 }
