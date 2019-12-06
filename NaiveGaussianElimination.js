@@ -1,4 +1,5 @@
 function Naive_Gauss(n, a, b, x) {
+    var k, i, j;
     for (k = 0; k < n - 1; k++) {
         for (i = k + 1; i < n; i++) {
             for (j = k + 1; j < n; j++) {
